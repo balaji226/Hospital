@@ -1,28 +1,77 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hospital Management System</title>
-    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
 </head>
 <body>
 
-<h1>Hospital Management System</h1>
+<header>
+    <div class="logo">
+        <h2>🏥 Hospital Management System</h2>
+    </div>
 
-<div class="container">
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="patients.html">Patients</a></li>
+            <li><a href="doctors.html">Doctors</a></li>
+            <li><a href="appointments.html">Appointments</a></li>
+            <li><a href="billing.html">Billing</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <input type="text" id="patientName" placeholder="Enter Patient Name">
+<section class="hero">
 
-    <input type="number" id="patientAge" placeholder="Enter Age">
+    <h1>Welcome to Hospital Management System</h1>
 
-    <button onclick="addPatient()">Add Patient</button>
+    <p>
+        Manage Patients, Doctors, Appointments and Billing
+        in one place.
+    </p>
 
-    <h2>Patient List</h2>
+    <a href="login.html" class="btn">Login</a>
 
-    <ul id="patientList"></ul>
+</section>
 
-</div>
+<section class="cards">
 
-<script src="script.js"></script>
+    <div class="card">
+        <i class="fa-solid fa-user-injured"></i>
+        <h3>Patients</h3>
+        <p>Register and manage patient records.</p>
+    </div>
+
+    <div class="card">
+        <i class="fa-solid fa-user-doctor"></i>
+        <h3>Doctors</h3>
+        <p>Manage doctor information.</p>
+    </div>
+
+    <div class="card">
+        <i class="fa-solid fa-calendar-check"></i>
+        <h3>Appointments</h3>
+        <p>Book and manage appointments.</p>
+    </div>
+
+    <div class="card">
+        <i class="fa-solid fa-file-invoice-dollar"></i>
+        <h3>Billing</h3>
+        <p>Generate hospital bills.</p>
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 Hospital Management System | Developed by Balaji</p>
+</footer>
 
 </body>
 </html>
