@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hospital Dashboard</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f4f7fc;
+}
+
+header{
+    background:#0d6efd;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+.dashboard{
+    width:90%;
+    margin:30px auto;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    text-align:center;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card h2{
+    color:#0d6efd;
+    margin-bottom:10px;
+}
+
+.card p{
+    font-size:18px;
+    color:#555;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:10px 20px;
+    background:#0d6efd;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
+}
+
+.btn:hover{
+    background:#084298;
+}
+
+.logout{
+    text-align:center;
+    margin-top:40px;
+}
+
+.logout button{
+    padding:12px 30px;
+    background:red;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+.logout button:hover{
+    background:darkred;
+}
+
+footer{
+    text-align:center;
+    margin-top:50px;
+    padding:20px;
+    background:#0d6efd;
+    color:white;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>🏥 Hospital Management System</h1>
+
+<h3>Admin Dashboard</h3>
+
+</header>
+
+<div class="dashboard">
+
+<div class="cards">
+
+<div class="card">
+<h2>Patients</h2>
+<p>Manage Patient Records</p>
+<a href="patients.html" class="btn">Open</a>
+</div>
+
+<div class="card">
+<h2>Doctors</h2>
+<p>Manage Doctor Details</p>
+<a href="doctors.html" class="btn">Open</a>
+</div>
+
+<div class="card">
+<h2>Appointments</h2>
+<p>Manage Appointment Booking</p>
+<a href="appointments.html" class="btn">Open</a>
+</div>
+
+<div class="card">
+<h2>Billing</h2>
+<p>Generate Hospital Bills</p>
+<a href="billing.html" class="btn">Open</a>
+</div>
+
+</div>
+
+<div class="logout">
+
+<button onclick="logout()">
+Logout
+</button>
+
+</div>
+
+</div>
+
+<footer>
+
+<p>© 2026 Hospital Management System | Developed by Balaji</p>
+
+</footer>
+
+<script>
+
+function logout(){
+
+alert("Logged Out Successfully");
+
+window.location.href="login.html";
+
+}
+
+</script>
+
+</body>
+</html>
