@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hospital Billing System</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+
+body{
+    background:#f4f7fc;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.container{
+    width:90%;
+    margin:30px auto;
+}
+
+h2{
+    text-align:center;
+    color:#0d6efd;
+    margin-bottom:20px;
+}
+
+.form-box{
+    background:#fff;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0px 0px 10px rgba(0,0,0,0.2);
+}
+
+input{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border:1px solid #ccc;
+    border-radius:5px;
+    font-size:16px;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    background:#0d6efd;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:17px;
+}
+
+button:hover{
+    background:#084298;
+}
+
+table{
+    width:100%;
+    margin-top:30px;
+    border-collapse:collapse;
+    background:white;
+}
+
+table th{
+    background:#0d6efd;
+    color:white;
+    padding:12px;
+}
+
+table td{
+    border:1px solid #ddd;
+    padding:10px;
+    text-align:center;
+}
+
+.delete-btn{
+    background:#dc3545;
+    color:white;
+    border:none;
+    padding:8px 15px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.delete-btn:hover{
+    background:#bb2d3b;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h2 style="background:#0d6efd;color:white;padding:15px;text-align:center;">
+🏥 Hospital Management System
+</h2>
+
+</header>
+
+<div class="container">
+
+<h2>Hospital Billing</h2>
+
+<div class="form-box">
+
+<input type="text" id="patientName" placeholder="Patient Name">
+
+<input type="text" id="treatment" placeholder="Treatment">
+
+<input type="number" id="amount" placeholder="Amount">
+
+<button onclick="generateBill()">Generate Bill</button>
+
+</div>
+
+<table>
+
+<thead>
+
+<tr>
+<th>Bill ID</th>
+<th>Patient Name</th>
+<th>Treatment</th>
+<th>Amount (₹)</th>
+<th>Action</th>
+</tr>
+
+</thead>
+
+<tbody id="billTable">
+
+</tbody>
+
+</table>
+
+</div>
+
+<script src="js/billing.js"></script>
+
+</body>
+</html>
