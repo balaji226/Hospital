@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Appointment Management</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+
+body{
+    background:#f4f7fc;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.container{
+    width:90%;
+    margin:30px auto;
+}
+
+h2{
+    text-align:center;
+    color:#0d6efd;
+    margin-bottom:20px;
+}
+
+.form-box{
+    background:#fff;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
+}
+
+input,select{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border:1px solid #ccc;
+    border-radius:5px;
+    font-size:16px;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    background:#0d6efd;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#084298;
+}
+
+table{
+    width:100%;
+    margin-top:30px;
+    border-collapse:collapse;
+    background:white;
+}
+
+table th{
+    background:#0d6efd;
+    color:white;
+    padding:12px;
+}
+
+table td{
+    border:1px solid #ddd;
+    padding:10px;
+    text-align:center;
+}
+
+.delete-btn{
+    background:#dc3545;
+    padding:8px 15px;
+    border:none;
+    color:white;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.delete-btn:hover{
+    background:#bb2d3b;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h2 style="text-align:center;padding:15px;background:#0d6efd;color:white;">
+🏥 Hospital Management System
+</h2>
+</header>
+
+<div class="container">
+
+<h2>Appointment Booking</h2>
+
+<div class="form-box">
+
+<input type="text" id="patientName" placeholder="Patient Name">
+
+<input type="text" id="doctorName" placeholder="Doctor Name">
+
+<input type="date" id="appointmentDate">
+
+<input type="time" id="appointmentTime">
+
+<button onclick="addAppointment()">Book Appointment</button>
+
+</div>
+
+<table>
+
+<thead>
+
+<tr>
+<th>ID</th>
+<th>Patient</th>
+<th>Doctor</th>
+<th>Date</th>
+<th>Time</th>
+<th>Action</th>
+</tr>
+
+</thead>
+
+<tbody id="appointmentTable">
+
+</tbody>
+
+</table>
+
+</div>
+
+<script src="js/appointment.js"></script>
+
+</body>
+</html>
